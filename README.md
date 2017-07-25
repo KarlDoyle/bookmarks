@@ -15,13 +15,6 @@ ENV['BOOKMARKS_FACEBOOK_ID']
 ENV['BOOKMARKS_FACEBOOK_SECRET']
 ```
 
-You can use the following values to quickly test
-
-```
-export BOOKMARKS_SECRET_KEY='GciOiJIUzI1NiJ9.eyJ1c2VyIjoia2FybCJ9.NsfTohhdy'
-export BOOKMARKS_FACEBOOK_ID='1157801300984266'
-export BOOKMARKS_FACEBOOK_SECRET='6dddc2ab1d2e754c96857cd1c97f45f3'
-```
 
 ### Starting the
 
