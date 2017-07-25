@@ -1,0 +1,63 @@
+.button {
+  -webkit-appearance: none;
+  border: 1px solid #efefef;
+  font-size: 0.8em;
+  padding: 0.6em;
+  display: inline-block;
+  margin: 0 1px;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  transition: all 200ms ease;
+}
+.button--default {
+  background: white;
+  color: #00A7F7;
+  border-color: #00A7F7;
+}
+.button--default:hover {
+  border-color: #8fdbff;
+}
+.button--default:active {
+  box-shadow: inset 0 4px 9px -6px #8fdbff;
+  background: #fbfafa;
+}
+
+.button--primary {
+  background: #00A7F7;
+  color: white;
+  border-color: #00A7F7;
+}
+.button--primary:hover {
+  background-color: #49c4ff;
+  border-color: #49c4ff;
+}
+
+
+.button--interest {
+  background-color: white;
+  border-color: #DEDEDE;
+  color: black;
+  float: left;
+  margin: 0 5px 5px 0;
+}
+
+.button--interest:hover {
+  border-color: #777777;
+}
+
+.button--link {
+  margin-top:10px;
+  background: transparent;
+  border: transparent;
+  padding: 0px;
+  text-decoration: underline;
+  color: #00A7F7;
+  clear: both;
+  float: left;
+}
+.button--facebook {
+  background-color: #3c5b9b;
+  border-color: #3c5b9b;
+  color: white;
+}
