@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: Lato;
+}
+
+* {
+  box-sizing: border-box;
+}
+input[type="text"], input[type="url"] {
+    -webkit-appearance: none;
+    border: 1px solid #dddddd;
+    background: #efefef;
+    padding: 0.6em;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 0.8em;
+}

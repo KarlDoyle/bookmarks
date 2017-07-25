@@ -1,0 +1,16 @@
+.alert {
+  background: #ef6e6e;
+  color: white;
+  padding: 7px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all ease 200ms;
+  transform: translate(0, -100%);
+}
+.alert--show {
+  transform: translate(0, 0);
+}

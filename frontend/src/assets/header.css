@@ -1,0 +1,119 @@
+.container {
+  width: 100%;
+  max-width: 40em;
+  padding: 0 20px;
+  margin: 50px auto;
+  position: relative;
+  /*padding-top: 50px;*/
+}
+
+
+.grid-row {
+  display: flex;
+  justify-content: space-between;
+}
+.grid-column {
+  /*background-color: salmon;*/
+  flex-grow: 1;
+}
+/*.grid-column-8 {
+  flex-basis: 60%;
+}
+.grid-column-4 {
+  flex-basis: 30%;
+}*/
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: inherit;
+  top: 0;
+  padding-bottom: 40px;
+}
+
+.site-header--fixed {
+  background-color: white;
+  z-index: 1000;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid #efefef;
+  position: fixed;
+  max-width: 65em;
+}
+.site-header-actions {
+  display: flex;
+  align-items: center;
+}
+.site-header-actions > .button, .site-header-actions > * {
+  margin-left: 0.6em;
+}
+
+.site-header-logo {
+  transition: all 800ms ease;
+  max-width: 100%;
+}
+.site-header-logo:hover {
+  transform: rotate(360deg);
+  border-radius: 300px;
+}
+
+.site-header-profile {
+  display: inherit;
+  height: 30px;
+  width: 30px;
+  position: relative;
+}
+.site-header-profile img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 100px;
+}
+.site-header-profile:hover .site-header-profile-ul {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  max-height: 2000px;
+  overflow: visible;
+}
+.site-header-profile-ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  max-height: 2px;
+  background: white;
+  border: 1px solid #ddd;
+  font-size: 0.8em;
+  min-width: 100px;
+  transition: transform 400ms ease, opacity 400ms ease;
+  transform: translate(-50%, -10%);
+}
+.site-header-profile-ul li:first-child {
+  border-bottom: 1px solid #ddd;
+}
+.site-header-profile-ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em;
+  color: #444;
+}
+.site-header-profile-ul li a:hover {
+  background-color: #efefef;
+}
+ul.site-header-profile-ul:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    height: 7px;
+    width: 7px;
+    background: white;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
