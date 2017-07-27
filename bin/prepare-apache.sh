@@ -9,6 +9,8 @@ echo "Install and configure Apache to serve a Python mod_wsgi application."
 # http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/
 yes 'y' | apt-get install apache2 apache2-doc apache2-utils libapache2-mod-wsgi
 
+a2enmod headers
+
 echo "Setup Apache virtual host:"
 # a2dissite 000-default.conf
 # Setup hosts file
@@ -35,6 +37,11 @@ NameVirtualHost *:9000
     SetEnv FACEBOOK_SECRET $(printenv BOOKMARKS_FACEBOOK_SECRET)
 
     <Directory /var/www/api>
+        Header set Access-Control-Allow-Headers "ORIGIN, X-REQUESTED-WITH, CONTENT-TYPE, Authorization"
+        Header set Access-Control-Allow-Methods "POST, GET, OPTIONS, PUT, DELETE"
+        Header set Access-Control-Allow-Origin "*"
+        Header set Access-Control-Allow-Credentials true
+        WSGIPAssAuthorization On
         WSGIProcessGroup api
         WSGIApplicationGroup %{GLOBAL}
         Order allow,deny
@@ -46,6 +53,7 @@ echo "${VHOST}" > /etc/apache2/sites-enabled/000-default
 
 
 echo "Setup Bookmarks virtual host:"
+mkdir -p /var/www/bookmarks
 mkdir -p /var/www/bookmarks/public_html
 mkdir -p /var/www/bookmarks/api
-mkdir /var/www/bookmarks/logs
+mkdir -p /var/www/bookmarks/logs

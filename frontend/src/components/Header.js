@@ -14,7 +14,7 @@ const isLoggedIn = (props) => (
     <div className="site-header-profile">
       <img src={props.avatar} alt="Avatar" />
       <ul className="site-header-profile-ul">
-        <li><a href="#">My Account</a></li>
+        {/*<li><a href="#">My Account</a></li>*/}
         <li><a href="#" onClick={props.logout}>Logout</a></li>
       </ul>
     </div>

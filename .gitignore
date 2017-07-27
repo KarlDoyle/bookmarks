@@ -1,3 +1,4 @@
+bin/bootstrap.sh
 .DS_Store
 .vagrant
 frontend/build

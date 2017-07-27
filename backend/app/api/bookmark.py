@@ -45,10 +45,11 @@ def bookmarks():
         current_user = get_jwt_identity()
         user_id = current_user['id']
         bookmarks = BookmarkController.all(user_id)
+
         if not bookmarks:
-            return jsonify([])
+            return jsonify([]), 200
         else:
-            return jsonify([i.serialize() for i in bookmarks])
+            return jsonify([i.serialize() for i in bookmarks]), 200
 
 
 @bookmark_api.route('/bookmarks/<bookmark_id>', methods=['DELETE', 'PUT'])

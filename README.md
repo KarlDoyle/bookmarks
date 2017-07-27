@@ -1,36 +1,76 @@
-# Getting started.
+Linux Server Configuration
+===========================
 
-`backend` controls the api
-`frontend` is the public facing website
+#### IP address
 
-## Backend
+34.248.112.130
 
-### Adding secret values
+#### URL
 
-in `/backend/Vagrantfile` replace the following strings with your values
+**Frontend app**
+http://34.248.112.130/#/
 
-```
-ENV['BOOKMARKS_SECRET_KEY']
-ENV['BOOKMARKS_FACEBOOK_ID']
-ENV['BOOKMARKS_FACEBOOK_SECRET']
-```
+**Backend Api**
+http://34.248.112.130:9000
 
-### Starting the
+#### Software installed,
+List of software can be found in `requirements.txt` and `/bin`
+Full list here
+* python
+* python-flask
+* python-sqlalchemy
+* python-pip
+* openssl
+* python-dev
+* libffi-dev
+* libssl-dev
+* apache2
+* apache2-doc
+* apache2-utils
+* libapache2-mod-wsgi
+* postgresql
+* python-psycopg2
+* appdirs
+* beautifulsoup4
+* click
+* factory-boy
+* Faker
+* Flask
+* Flask-JWT
+* Flask-JWT-Extended
+* httplib2
+* ipaddress
+* itsdangerous
+* Jinja2
+* MarkupSafe
+* packaging
+* PyJWT
+* pyparsing
+* python-dateutil
+* simplekv
+* six
+* Werkzeug
+* SQLAlchemy
+* Flask-Testing
+* requests
+* certifi
+* pyOpenSSL
+* ndg-httpsclient
+* pyasn1
 
-`cd backend`
+#### Configurations made
 
-`vagrant up`
+All can be found within `/bin`
 
-`vagrant ssh`
+- Update, upgrade
+- Setup grader account
+- Apache setup
+- Postgres setup
+- Firewall setup
+- SSH setup
+- Security setup
 
-`python start.py`
+#### List of third-party resources
 
-## starting frontend
-
-Ensure you have Node and NPM installed.
-
-`cd frontend`
-
-`npm install`
-
-`npm start`
+* Github
+* Amazon lightsail

@@ -20,7 +20,6 @@ const mapDispatchToProps = (dispatch, props) => {
       const token = loadState().session.token;
       if (!loadState()) return;
       dispatch(fetchBookmarks(token)).then((response) => {
-          console.log(response)
           if (!response.error) {
             dispatch(fetchBookmarksSuccess(response.payload.data))
           } else {
