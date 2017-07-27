@@ -3,15 +3,15 @@ Linux Server Configuration
 
 #### IP address
 
+**Frontend app**
 34.248.112.130
+
+**Backend Api**
+172.30.1.5:9100
 
 #### URL
 
-**Frontend app**
 http://34.248.112.130/#/
-
-**Backend Api**
-http://34.248.112.130:9000
 
 #### Software installed,
 List of software can be found in `requirements.txt` and `/bin`
